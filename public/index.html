@@ -42,48 +42,17 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Proin sagittis nisl rhoncus mattis rhoncus. Gravida in fermentum et sollicitudin ac orci phasellus egestas
-    tellus. Pretium lectus quam id leo in vitae turpis. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim.
-    Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Velit euismod in pellentesque massa placerat duis
-    ultricies lacus sed. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. Viverra adipiscing at in
-    tellus integer feugiat. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus.
-
-    Facilisis gravida neque convallis a cras semper auctor neque vitae. Donec enim diam vulputate ut pharetra sit. Vel
-    pretium lectus quam id leo in vitae turpis. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Hendrerit
-    dolor magna eget est lorem ipsum dolor. Ac turpis egestas integer eget aliquet nibh praesent. Facilisis leo vel
-    fringilla est ullamcorper. Massa ultricies mi quis hendrerit dolor magna eget. Tortor aliquam nulla facilisi cras
-    fermentum odio eu. Massa placerat duis ultricies lacus sed turpis. Aliquam ut porttitor leo a. Neque vitae tempus
-    quam pellentesque nec nam aliquam sem. Ipsum consequat nisl vel pretium lectus. Mauris vitae ultricies leo integer
-    malesuada. Venenatis tellus in metus vulputate eu.
-
-    Augue mauris augue neque gravida in fermentum et sollicitudin. In cursus turpis massa tincidunt dui ut. Tortor
-    dignissim convallis aenean et tortor. Tellus rutrum tellus pellentesque eu tincidunt. Tortor consequat id porta nibh
-    venenatis. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Tincidunt id aliquet risus
-    feugiat in ante metus dictum. Dolor purus non enim praesent elementum facilisis leo. Fringilla urna porttitor
-    rhoncus dolor. Tellus mauris a diam maecenas sed. Dui faucibus in ornare quam viverra orci sagittis eu. Proin libero
-    nunc consequat interdum varius. Euismod quis viverra nibh cras pulvinar mattis nunc. Ullamcorper velit sed
-    ullamcorper morbi tincidunt ornare massa eget. Pellentesque diam volutpat commodo sed egestas egestas fringilla
-    phasellus faucibus. Lacus laoreet non curabitur gravida arcu ac tortor. Duis at consectetur lorem donec massa sapien
-    faucibus et. Rhoncus dolor purus non enim praesent elementum.
-
-    Pulvinar pellentesque habitant morbi tristique senectus et netus et. Nunc non blandit massa enim. Porttitor massa id
-    neque aliquam vestibulum morbi blandit cursus risus. Sed egestas egestas fringilla phasellus faucibus scelerisque
-    eleifend donec. Cursus sit amet dictum sit amet justo donec enim diam. Arcu cursus euismod quis viverra nibh cras
-    pulvinar. Pretium fusce id velit ut. In hendrerit gravida rutrum quisque non tellus orci. Quam adipiscing vitae
-    proin sagittis nisl rhoncus mattis rhoncus. Sit amet tellus cras adipiscing enim eu turpis egestas. Pulvinar sapien
-    et ligula ullamcorper malesuada proin libero nunc consequat. Elit ut aliquam purus sit amet luctus venenatis lectus
-    magna. Nunc sed augue lacus viverra vitae. Velit egestas dui id ornare arcu odio ut sem nulla. Et tortor consequat
-    id porta nibh venenatis cras. Enim ut tellus elementum sagittis vitae et leo duis.
-
-    Egestas integer eget aliquet nibh praesent tristique magna. Scelerisque mauris pellentesque pulvinar pellentesque
-    habitant morbi tristique. Sed arcu non odio euismod lacinia. Ultrices in iaculis nunc sed augue lacus viverra.
-    Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Tortor at auctor urna nunc. Nunc non blandit
-    massa enim nec. Facilisis sed odio morbi quis commodo odio aenean sed. Imperdiet dui accumsan sit amet nulla
-    facilisi morbi tempus. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Egestas fringilla phasellus
-    faucibus scelerisque. Vestibulum sed arcu non odio euismod. Integer feugiat scelerisque varius morbi enim nunc
-    faucibus. Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Aliquam purus sit amet luctus
-    venenatis lectus magna fringilla.
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="/tweets">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 
