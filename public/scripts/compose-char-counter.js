@@ -6,6 +6,5 @@ $(document).ready(() => {
     if (counter <= 0) {
       $(this.form[2]).addClass('red-font')
     }
-    console.log();
   })
 })
