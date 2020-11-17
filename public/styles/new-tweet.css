@@ -1,0 +1,39 @@
+/* New Tweet form styles */
+
+.counter {
+  text-align: right;
+}
+form {
+  background-color:#DDD8C4;
+  display: flex;
+  flex-direction: column;
+}
+main h2 {
+  margin: 10px;
+}
+#tweet-text {
+  margin: 2%;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  height: 55px;
+  font-weight: 600;
+}
+
+.submit-btn {
+  border: white thin;
+  border-radius: 8px;
+  background-color: #4056a1;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2%;
+  font-family: Bungee;
+  font-weight: 10;
+}
