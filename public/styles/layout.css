@@ -24,7 +24,7 @@ body {
   align-content: center;
 }
 
- main {
+ .container {
    width: 90%;
    margin: 0 5% 0 5%;
    background-color: #f4f1ec;
@@ -32,5 +32,5 @@ body {
  }
 
  .red-font {
-   color: red;
+   color:
  }
