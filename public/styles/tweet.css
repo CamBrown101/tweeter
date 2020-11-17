@@ -6,7 +6,7 @@
   filter: opacity(75%);
 }
 .tweet-container:hover {
-  box-shadow: 10px 10px #4056a1;
+  box-shadow: 10px 10px 10px #4056a1;
   filter: none;
 }
 
