@@ -4,9 +4,17 @@ header {
   height: 400px;
   width: 100%;
   display:flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #d89820;
   background-image: url("../images/light-wool.png")
+}
+header img {
+  margin-top: 20%;
+}
+.username {
+  margin: 0;
+}
+header h2 {
+  margin: 0;
 }
