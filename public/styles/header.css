@@ -1,0 +1,12 @@
+/* Styles for header */
+
+header {
+  height: 400px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d89820;
+  background-image: url("../images/light-wool.png")
+}
