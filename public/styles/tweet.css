@@ -1,5 +1,44 @@
 #tweet-container {
-  border: black solid 1px;
+  border: black solid 2px;
+  border-radius: 10px;
   width: 90%;
   margin: 20px 5%;
+}
+
+#tweet-container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2% 5%;
+}
+
+#tweet-container header i {
+  font-size: 60px;
+  color: black;
+}
+
+#tweet-container footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 5%
+}
+
+.tweet-content {
+  border-bottom: black solid 2px;
+  margin: 0 5%;
+  text-align: start;
+  font-size: 2rem;
+}
+.tweet-content p {
+  margin-top: 0;
+}
+
+.name-plate {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  font-size: 1rem;
 }
