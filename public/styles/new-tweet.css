@@ -13,7 +13,7 @@ main h2 {
   margin: 10px;
 }
 #tweet-text {
-  margin: 2%;
+  margin: 1% 2% 2% 2%;
   padding: 10px;
   outline: none;
   resize: none;
@@ -42,10 +42,18 @@ main h2 {
   justify-content: space-between;
   align-items: center;
   margin: 1% 2% 2% 2%;
-  font-family: Bungee;
+  font-family: Bungee, sans-serif;
   font-weight: 10;
 }
 
+.error-message {
+  align-self: start;
+  margin: 5% 0 0 2%;
+  padding: 10px;
+  font-weight: 600;
+  color:#cf3b3b;
+}
+
 .red-text {
-  color:red;
+  color:#cf3b3b;
 }

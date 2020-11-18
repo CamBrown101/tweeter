@@ -11,7 +11,9 @@ $(document).ready(() => {
   const createTweetElement = (tweetObject) => {
     const datePosted = tweetObject.created_at
     const today = new Date();
-    const difference = Date.parse(today) - datePosted;
+    let difference = (Date.parse(today) - datePosted)
+    //Sending quick requests to the server results in a delay server side causing negative times 
+    difference = (difference < 0) ? 0 : difference;
     const daysPosted = Math.floor(difference / (24 * 60 * 60 * 1000));
 
     let $tweet =
