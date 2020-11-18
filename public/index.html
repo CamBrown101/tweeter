@@ -51,7 +51,7 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets">
+      <form id="new-tweet-form" method="POST" action="/tweets">
         <!-- <label for="tweet-text">What are you humming about?</label> -->
         <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
         <div class="tweet-footer">
@@ -61,7 +61,7 @@
       </form>
     </section>
     <div id="tweet-container">
-      <article class="tweet-main">
+      <!-- <article class="tweet-main">
         <header>
           <div class="name-plate">
             <i class="fas fa-user-ninja"></i>
@@ -82,7 +82,7 @@
             <i class="fas fa-heart"></i>
           </div>
         </footer>
-      </article>
+      </article> -->
     </div>
   </main>
 </body>
