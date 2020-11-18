@@ -54,6 +54,8 @@ $(document).ready(() => {
         renderTweets(tweets)
       })
   };
+  //Initial load of tweets
+  loadTweets();
 
   //On new tweet form submit
   $("#new-tweet-form").submit((event) => {
@@ -61,7 +63,7 @@ $(document).ready(() => {
     let text = $('#tweet-text').val();
 
     //Tweet Validation
-    if (text === null || text === '') {
+    if (!text) {
       alert('Nothing entered')
       return;
     }
