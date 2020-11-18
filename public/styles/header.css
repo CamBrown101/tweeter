@@ -1,5 +1,13 @@
 /* Styles for header */
 
+header img {
+  margin-top: 20%;
+}
+
+header h2 {
+  margin: 0;
+}
+
 .page-header {
   height: 400px;
   width: 100%;
@@ -10,12 +18,7 @@
   background-color: #d89820;
   background-image: url("../images/light-wool.png")
 }
-header img {
-  margin-top: 20%;
-}
+
 .username {
-  margin: 0;
-}
-header h2 {
   margin: 0;
 }
