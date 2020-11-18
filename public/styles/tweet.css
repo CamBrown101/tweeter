@@ -48,6 +48,11 @@
 .icons {
   font-size: 1rem;
   color: #4056a1;
+  display: none;
+}
+
+.tweet-main:hover .icons {
+  display: block;
 }
 
 .username {
