@@ -59,11 +59,22 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  //Renders the tweet template to the DOM
   const renderTweets = (tweets) => {
     tweets.forEach((element) => {
-      $("#tweet-container").append(createTweetElement(element))
+      $('#tweet-container').append(createTweetElement(element))
     })
   }
   renderTweets(data);
+
+  const loadTweets = () => {
+    $.get('/tweets')
+  }
+
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    $.post('/tweets',
+      $('#new-tweet-form').serialize());
+  })
 });
 
