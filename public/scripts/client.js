@@ -64,6 +64,5 @@ $(document).ready(() => {
     $('.char-counter').text(140)
     loadTweets()
   })
-
 });
 
