@@ -4,7 +4,7 @@
   text-align: right;
 }
 form {
-  background-color:#DDD8C4;
+  background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -19,23 +19,29 @@ main h2 {
   resize: none;
   overflow: hidden;
   border: none;
+  border-bottom: 2px solid black;
   height: 55px;
   font-weight: 600;
+  background-color: #f4f1ec;
 }
 
 .submit-btn {
-  border: white thin;
-  border-radius: 8px;
+  border: thick solid #f4f1ec;
   background-color: #4056a1;
-  color: white;
-  margin-bottom: 10px;
+  color: #f4f1ec;
+  margin: 0;
   padding: 7px 10px;
+}
+
+.submit-btn:focus {
+  border : thick solid lightskyblue;
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
-  margin: 0 2%;
+  align-items: center;
+  margin: 1% 2% 2% 2%;
   font-family: Bungee;
   font-weight: 10;
 }
