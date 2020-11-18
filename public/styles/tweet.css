@@ -1,29 +1,29 @@
-.tweet-container {
+.tweet-main {
   border: black solid 2px;
   border-radius: 10px;
   width: 90%;
   margin: 20px 5%;
   filter: opacity(75%);
 }
-.tweet-container:hover {
+.tweet-main:hover {
   box-shadow: 10px 10px 10px #4056a1;
   filter: none;
 }
 
-/* Header of the tweet */
-.tweet-container header {
+/* Header of a tweet */
+.tweet-main header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 2% 5%;
 }
 
-.tweet-container header i {
+.tweet-main header i {
   font-size: 60px;
   color: black;
 }
 
-.tweet-container footer {
+.tweet-main footer {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -55,12 +55,7 @@
   opacity: 50%;
   display: none;
 }
-.tweet-container:hover .username {
+
+.tweet-main:hover .username {
   display: block;
-}
-
-/* Hover State */
-
-.:hover {
-
 }
