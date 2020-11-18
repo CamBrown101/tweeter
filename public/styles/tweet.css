@@ -15,12 +15,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2% 5%;
+  margin: 3% 5%;
 }
 
-.tweet-main header i {
+.tweet-main header img {
   font-size: 60px;
-  color: black;
+  margin: 0;
 }
 
 .tweet-main footer {
