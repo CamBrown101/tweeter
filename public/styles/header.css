@@ -1,7 +1,7 @@
 /* Styles for header */
 
 header img {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 header h2 {
@@ -19,6 +19,7 @@ header h2 {
   background-image: url("../images/light-wool.png")
 }
 
-.username {
-  margin: 0;
+.username-heading {
+  font-size: 1.5em;
+  margin: 1% 0 3% 0;
 }
