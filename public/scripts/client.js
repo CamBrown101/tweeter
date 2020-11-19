@@ -1,4 +1,10 @@
 $(document).ready(() => {
+  //Cached queries 
+  const $errorMessage = $('.error-message');
+  const $newTweetForm = $('#new-tweet-form');
+  const $text = $('#tweet-text');
+  const $charCounter = $('.char-counter');
+  const $tweetContainer = $('#tweet-container');
 
   //Prevents js from processed in tweets
   const escape = (str) => {
@@ -43,15 +49,15 @@ $(document).ready(() => {
 
   //Renders the tweet template to the DOM
   const renderTweets = (tweets) => {
-    $('#tweet-container').empty();
+    $tweetContainer.empty();
     tweets.reverse().forEach((element) => {
 
-      $('#tweet-container').append(createTweetElement(element));
+      $tweetContainer.append(createTweetElement(element));
     })
   }
 
-  const loadTweets = () => {
-    $.ajax('/tweets', { method: 'GET' })
+  const loadTweets = function() {
+    return $.ajax('/tweets', { method: 'GET' })
       .then((tweets) => {
         renderTweets(tweets);
       })
@@ -60,21 +66,20 @@ $(document).ready(() => {
   loadTweets();
 
   //Creates and shows error message
-  const $errorMessage = $('.error-message');
   const errorMessage = (message) => {
     $errorMessage.text(message).slideDown('slow');
   };
 
-  //On new tweet form submit
-  $('#new-tweet-form').submit((event) => {
+  $newTweetForm.submit((event) => {
     event.preventDefault();
-    const text = $('#tweet-text').val();
+    const $textValue = $text.val();
+
     //Tweet Validation
-    if (!text.trim()) {
+    if (!$textValue.trim()) {
       errorMessage('Input is empty');
       return false;
     }
-    if (text.length > 140) {
+    if ($textValue.length > 140) {
       errorMessage('Input exceeds 140 characters')
       return false;
     }
@@ -82,20 +87,18 @@ $(document).ready(() => {
     $.ajax({
       type: 'POST',
       url: '/tweets',
-      data: $('#new-tweet-form').serialize(),
-    })
-      //Reset char Counter bad reload tweets
-      .then(() => {
-        $('#tweet-text').val('');
-        $('.char-counter').text(140);
-        loadTweets();
-      })
+      data: $newTweetForm.serialize(),
+    }).then(() => {
+      $text.val('');
+      $charCounter.text(140);
+      return loadTweets();
+    });
   });
 
   //Clears error message when the text is changed
-  $('#tweet-text').on('input', () => {
+  $text.on('input', () => {
     $errorMessage.slideUp('slow', () => {
-      $errorMessage.css('display', 'none')
+      $errorMessage.hide();
     });
   });
-})
+});
