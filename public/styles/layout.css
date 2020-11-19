@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -31,27 +32,3 @@ body {
    text-align: center;
  }
 
- footer .back-to-top-btn{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 5em;
-   width: 5em;
-   margin: 0 30px 30px 0;
-   border-radius: 100px;
-   position: fixed;
-   bottom:0;
-   right: 0;
-   background-color: #4056a1;
- }
-footer .footer-container {
-  display: none;
-}
- footer i {
-   color: #ffffff;
-   font-size: 4.6em;
- }
- 
- footer i:hover {
-   font-size: 4em;
- }
