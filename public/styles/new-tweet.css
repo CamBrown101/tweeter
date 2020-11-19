@@ -1,8 +1,5 @@
 /* New Tweet form styles */
 
-.counter {
-  text-align: right;
-}
 form {
   background-color: #f4f1ec;
   display: flex;
@@ -12,6 +9,15 @@ form {
 main h2 {
   margin: 10px;
 }
+
+label {
+  margin: 0 0 0 3%;
+  align-self: flex-start;
+  font-size: 1.25em;
+  font-weight: 600;
+
+}
+
 #tweet-text {
   margin: 1% 2% 2% 2%;
   padding: 10px;
@@ -24,9 +30,25 @@ main h2 {
   font-weight: 600;
   background-color: #f4f1ec;
 }
+.hide {
+  display:block
+}
+.animation {
+  display: none;
+}
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter {
+  text-align: right;
+}
 
 .submit-btn {
   border: thick solid #f4f1ec;
+  border-radius: 10px;
   background-color: #4056a1;
   color: #f4f1ec;
   margin: 0;
@@ -47,6 +69,7 @@ main h2 {
 }
 
 .error-message {
+  display: none;
   align-self: start;
   margin: 5% 0 0 2%;
   padding: 10px;
