@@ -21,6 +21,6 @@ footer .footer-container {
   font-size: 4.6em;
 }
 
-footer i:hover {
+.footer-container i:hover {
   font-size: 4em;
 }
