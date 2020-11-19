@@ -29,9 +29,6 @@ nav p {
 .new-tweet-btn i {
   margin-top: 6%;
   font-size: 50px;
-}
-
-.new-tweet-btn:hover i{
   color: #cf3b3b;
 }
 
