@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tweeter - Home Page</title>
+<!-- External CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  type="text/css" />
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300&display=swap"
+  rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+  integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<!-- App CSS -->
+<link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+<link rel="stylesheet" href="/styles/header.css" type="text/css" />
+<link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+<link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300&display=swap"
-    rel="stylesheet">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+<!-- App JS -->
+<script type="text/javascript" src="/scripts/client.js"></script>
+<script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+<script type="text/javascript" src="/scripts/dropdown-input.js"></script>
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="logo">TWEETER</span>
-    <div class="new-tweet">
+    <div class="new-tweet-btn">
       <p><strong>Write</strong>a new tweet</p>
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
   <header class="page-header">
     <div class="avatar">
-      <img src="/images/profile-hex.png">
+      <img src="/images/profile-hex.png" alt="user profile picture">
     </div>
     <br>
     <div class="user-name">
@@ -49,40 +48,20 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
-      <form id="new-tweet-form" method="POST" action="/tweets">
-        <!-- <label for="tweet-text">What are you humming about?</label> -->
-        <p class="error-message">THASIFBNAJKFBKASSFBKSAFSKAB</p>
-        <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
-        <div class="tweet-footer">
-          <button class="submit-btn" type="submit">Tweet</button>
-          <output class="char-counter" name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+    <div class="animation">
+      <section class="new-tweet">
+        <form id="new-tweet-form" method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <p class="error-message"></p>
+          <textarea name="text" id="tweet-text" required maxlength="150"></textarea>
+          <div class="tweet-footer">
+            <button class="submit-btn" type="submit">Tweet</button>
+            <output class="char-counter" name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </div>
     <div id="tweet-container">
-      <!-- <article class="tweet-main">
-        <header>
-          <div class="name-plate">
-            <i class="fas fa-user-ninja"></i>
-            <h2>Full Name</h2>
-          </div>
-          <h3 class="username">@Username</h3>
-        </header>
-
-        <div class="tweet-content">
-          <p>aslkdfdlksfjnfidskngfoindsiogn gidsngisdngoin sidnfgodsingionsdiogniosndgiondosignoisng
-            gdoisgnmoisngoinsdgi jsdigjisngoisndgoidnoignsdio d</p>
-        </div>
-        <footer>
-          <p>## days ago</p>
-          <div class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article> -->
     </div>
   </main>
 </body>

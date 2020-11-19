@@ -17,13 +17,18 @@ nav p {
   margin: 0;
 }
 
-.new-tweet {
+.new-tweet-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.new-tweet-btn:hover i{
+  color: #cf3b3b;
 }
 
 .logo {
   font-family: Bungee, sarif;
   font-size: 2em;
 }
+
