@@ -1,8 +1,8 @@
 .tweet-main {
-  border: black solid 2px;
-  border-radius: 10px;
   width: 90%;
   margin: 20px 5%;
+  border: black solid 2px;
+  border-radius: 10px;
   filter: opacity(75%);
   word-wrap: break-word;
 }
@@ -12,29 +12,28 @@
   filter: none;
 }
 
-/* Header of a tweet */
 .tweet-main header {
+  margin: 3% 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 3% 5%;
 }
 
 .tweet-main header img {
-  font-size: 60px;
   margin: 0;
+  font-size: 60px;
 }
 
 .tweet-main footer {
+  margin: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0 5%;
 }
 
 .tweet-content {
-  border-bottom: black solid 2px;
   margin: 0 5%;
+  border-bottom: black solid 2px;
   text-align: start;
   font-size: 2rem;
 }
@@ -48,9 +47,9 @@
 }
 
 .icons {
-  font-size: 1rem;
-  color: #4056a1;
   display: none;
+  color: #4056a1;
+  font-size: 1rem;
 }
 
 .tweet-main:hover .icons {
@@ -58,9 +57,9 @@
 }
 
 .username {
+  display: none;
   color:#4056a1;
   opacity: 50%;
-  display: none;
 }
 
 .tweet-main:hover .username {

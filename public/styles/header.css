@@ -16,10 +16,10 @@ header h2 {
   align-items: center;
   flex-direction: column;
   background-color: #d89820;
-  background-image: url("../images/light-wool.png")
+  background-image: url("../images/light-wool.png");
 }
 
 .username-heading {
-  font-size: 1.5em;
   margin: 1% 0 3% 0;
+  font-size: 1.5em;
 }
