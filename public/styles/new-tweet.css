@@ -31,12 +31,11 @@ label {
   font-weight: 600;
   background-color: #f4f1ec;
 }
-.hide {
-  display:block
-}
+
 .animation {
   display: none;
 }
+
 .new-tweet {
   display: flex;
   flex-direction: column;
