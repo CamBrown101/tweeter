@@ -52,6 +52,10 @@
   font-size: 1rem;
 }
 
+.icons i:hover {
+  font-size: 2em;
+}
+
 .tweet-main:hover .icons {
   display: block;
 }
