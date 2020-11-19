@@ -59,16 +59,18 @@ $(document).ready(() => {
   //Initial load of tweets
   loadTweets();
 
+  //Creates and shows error message
+  const $errorMessage = $('.error-message');
+  const errorMessage = (message) => {
+    $errorMessage.text(message).slideDown('slow');
+  };
+
   //On new tweet form submit
   $('#new-tweet-form').submit((event) => {
     event.preventDefault();
     const text = $('#tweet-text').val();
-    const $errorMessage = $('.error-message');
-    const errorMessage = (message) => {
-      $errorMessage.text(message).slideDown('slow');
-    };
     //Tweet Validation
-    if (!text) {
+    if (!text.trim()) {
       errorMessage('Input is empty');
       return false;
     }
@@ -76,11 +78,6 @@ $(document).ready(() => {
       errorMessage('Input exceeds 140 characters')
       return false;
     }
-    $('#tweet-text').on('input', () => {
-      $errorMessage.slideUp('slow', () => {
-        $errorMessage.css('display', 'none')
-      });
-    });
 
     $.ajax({
       type: 'POST',
@@ -93,5 +90,12 @@ $(document).ready(() => {
         $('.char-counter').text(140);
         loadTweets();
       })
+  });
+
+  //Clears error message when the text is changed
+  $('#tweet-text').on('input', () => {
+    $errorMessage.slideUp('slow', () => {
+      $errorMessage.css('display', 'none')
+    });
   });
 })
