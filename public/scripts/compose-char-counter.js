@@ -1,14 +1,18 @@
 $(document).ready(() => {
-  $('#tweet-text').on('input', function() {
+  const tweetText = $('#tweet-text');
+
+  tweetText.on('input', function() {
     let inputValue = $(this).val();
     let counter = 140 - inputValue.length;
-    $(this.form[2]).text(140 - inputValue.length)
+
+    const characterCountHtml = $(this.form[2])
+    characterCountHtml.text(140 - inputValue.length)
 
     if (counter >= 0) {
-      $(this.form[2]).removeClass('red-text')
+      characterCountHtml.removeClass('red-text')
     }
     if (counter < 0) {
-      $(this.form[2]).addClass('red-text')
+      characterCountHtml.addClass('red-text')
     }
   })
-})
+});
