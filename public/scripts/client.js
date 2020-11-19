@@ -1,12 +1,12 @@
 $(document).ready(() => {
-  //Cached queries 
+  //Cached Jqueries 
   const $errorMessage = $('.error-message');
   const $newTweetForm = $('#new-tweet-form');
   const $text = $('#tweet-text');
   const $charCounter = $('.char-counter');
   const $tweetContainer = $('#tweet-container');
 
-  //Prevents js from processed in tweets
+  //Prevents js from being injected in tweets from the form 
   const escape = (str) => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str))
@@ -15,15 +15,11 @@ $(document).ready(() => {
 
   //Creates the tweet template
   const createTweetElement = (tweetObject) => {
-    const datePosted = tweetObject.created_at
-    const today = new Date();
-    let difference = (Date.parse(today) - datePosted)
-    //Sending quick requests to the server results in a delay server side causing negative times 
-    difference = (difference < 0) ? 0 : difference;
-    const daysPosted = Math.floor(difference / (24 * 60 * 60 * 1000));
+    const datePosted = tweetObject.created_at;
+    const timeSincePost = moment(datePosted).fromNow();
 
     let $tweet =
-      `<article class="tweet-main">
+      `<article class="tweet-main wow animate__fadeIn animate__animated">
         <header>
           <div class="name-plate">
             <img src="${escape(tweetObject.user.avatars)}" alt="user avatar"/>
@@ -36,7 +32,7 @@ $(document).ready(() => {
           <p>${escape(tweetObject.content.text)}</p>
         </div>
         <footer>
-          <p>posted ${daysPosted} days ago</p>
+          <p>posted ${timeSincePost}</p>
           <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -44,6 +40,7 @@ $(document).ready(() => {
           </div>
         </footer>
       </article>`
+
     return $tweet;
   };
 
@@ -51,10 +48,9 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     $tweetContainer.empty();
     tweets.reverse().forEach((element) => {
-
       $tweetContainer.append(createTweetElement(element));
     })
-  }
+  };
 
   const loadTweets = function() {
     return $.ajax('/tweets', { method: 'GET' })
@@ -62,13 +58,14 @@ $(document).ready(() => {
         renderTweets(tweets);
       })
   };
-  //Initial load of tweets
-  loadTweets();
 
   //Creates and shows error message
   const errorMessage = (message) => {
     $errorMessage.text(message).slideDown('slow');
   };
+
+  //Initial load of tweets
+  loadTweets();
 
   $newTweetForm.submit((event) => {
     event.preventDefault();
