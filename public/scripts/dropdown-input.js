@@ -10,5 +10,5 @@ $(document).ready(() => {
   });
   $tweetBtn.on('click', () => {
     $animatedTextarea.slideToggle('slow');
-  });
+  })
 });
