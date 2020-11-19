@@ -16,15 +16,17 @@ $(document).ready(() => {
 
   $tweetBtn.on('click', () => {
     $animatedTextarea.slideToggle('slow');
+    $('#tweet-text').focus();
   })
 
-  //Back to top button
   $(window).scroll(() => {
-    $('.footer-container').show('slow')
+    if ($(window).scrollTop() > 50) {
+      $('.footer-container').show('slow')
+    }
   })
+
   $('.back-to-top-btn').click(() => {
-    $animatedTextarea.slideDown('slow');
     $("body").get(0).scrollIntoView();
-    $('.back-to-top-btn').hide('slow');
+    $('.footer-container').hide('slow');
   })
 });
