@@ -15,12 +15,20 @@ nav {
 
 nav p {
   margin: 0;
+  font-size: 30px;
 }
 
 .new-tweet-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.new-tweet-btn i {
+  margin-top: 4%;
+  font-size: 40px;
 }
 
 .new-tweet-btn:hover i{
