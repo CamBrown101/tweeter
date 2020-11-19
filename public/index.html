@@ -5,27 +5,40 @@
 <!-- External CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
   type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
   href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300&display=swap"
   rel="stylesheet">
+
 <!-- Icons -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
   integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
 <!-- App CSS -->
 <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- External libaries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script>
+  new WOW().init();
+</script>
 
 <!-- App JS -->
 <script type="text/javascript" src="/scripts/client.js"></script>
 <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
 <script type="text/javascript" src="/scripts/dropdown-input.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +46,7 @@
   <nav>
     <span class="logo">TWEETER</span>
     <div class="new-tweet-btn">
-      <p><strong>Write</strong>a new tweet</p>
+      <p><strong>Write</strong> a new tweet</p>
       <i class="fas fa-angle-double-down arrows"></i>
     </div>
   </nav>
