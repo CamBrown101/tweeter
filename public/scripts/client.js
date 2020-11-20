@@ -5,6 +5,8 @@ $(document).ready(() => {
   const $text = $('#tweet-text');
   const $charCounter = $('.char-counter');
   const $tweetContainer = $('#tweet-container');
+  const $tweetBtn = $('.new-tweet-btn');
+  const $animatedTextarea = $('.animation');
 
   //Prevents js from being injected in tweets from the form 
   const escape = (str) => {
@@ -90,6 +92,10 @@ $(document).ready(() => {
       $charCounter.text(140);
       return loadTweets();
     });
+
+    //Hide the new tweet form and show the new tweet button
+    $animatedTextarea.slideUp('slow');
+
   });
 
   //Clears error message when the text is changed
