@@ -1,0 +1,36 @@
+//CSS not to be changed
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Global layout styles
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@import 'nav';
+@import 'header';
+@import 'new-tweet';
+@import 'footer';
+
+.container {
+  width: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #f4f1ec;
+  text-align: center;
+}
+
+@import 'tweet';
+
+//Media Queries
+@import 'media-query'
