@@ -1,8 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
@@ -10,10 +5,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -25,10 +16,354 @@ body {
   align-content: center;
 }
 
- .container {
-   width: 90%;
-   margin: 3% 5% 0 5%;
-   background-color: #f4f1ec;
-   text-align: center;
- }
+nav {
+  width: 100%;
+  height: 120px;
+  padding: 1em 2em;
+  top: 0;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+nav p {
+  margin: 0;
+  font-size: 30px;
+}
 
+.new-tweet-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+.new-tweet-btn i {
+  margin-top: 6%;
+  font-size: 50px;
+  color: #cf3b3b;
+}
+
+.logo {
+  font-family: Bungee, sarif;
+  font-size: 2em;
+}
+
+header img {
+  margin-top: 15%;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.page-header {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d89820;
+  background-image: url("../images/light-wool.png");
+}
+
+.username-heading {
+  margin: 1% 0 3% 0;
+  font-size: 1.5em;
+}
+
+/* New Tweet form styles */
+form {
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+main h2 {
+  margin: 10px;
+}
+
+label {
+  margin: 0 0 0 2%;
+  align-self: flex-start;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+#tweet-text {
+  margin: 1% 2% 2% 2%;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: 2px solid black;
+  height: 80px;
+  font-weight: 600;
+  background-color: #f4f1ec;
+}
+
+.animation {
+  display: none;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter {
+  text-align: right;
+}
+
+.submit-btn {
+  border: thick solid #f4f1ec;
+  border-radius: 10px;
+  background-color: #4056a1;
+  color: #f4f1ec;
+  margin: 0;
+  padding: 7px 10px;
+}
+.submit-btn:hover {
+  border: thick solid #cf3b3b;
+}
+.submit-btn:focus {
+  border: thick solid #cf3b3b;
+  outline: none;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 2% 2% 2%;
+  font-family: Bungee, sans-serif;
+  font-weight: 10;
+}
+
+.error-message {
+  display: none;
+  align-self: start;
+  margin: 3% 0 0 2%;
+  padding: 10px;
+  font-weight: 600;
+  color: #cf3b3b;
+}
+
+.red-text {
+  color: #cf3b3b;
+}
+
+footer .back-to-top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  width: 5em;
+  margin: 0 30px 30px 0;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #4056a1;
+}
+footer .footer-container {
+  display: none;
+}
+
+.back-to-top-btn i {
+  color: #ffffff;
+  font-size: 4.6em;
+}
+
+.footer-container i:hover {
+  font-size: 4em;
+}
+
+.container {
+  width: 90%;
+  margin: 3% 5% 0 5%;
+  background-color: #f4f1ec;
+  text-align: center;
+}
+
+.tweet-main {
+  width: 90%;
+  margin: 20px 5%;
+  border: black solid 2px;
+  border-radius: 10px;
+  filter: opacity(75%);
+  word-wrap: break-word;
+}
+.tweet-main:hover {
+  box-shadow: 10px 10px 10px #4056a1;
+  filter: none;
+}
+.tweet-main header {
+  margin: 3% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tweet-main header img {
+  margin: 0;
+  font-size: 60px;
+}
+.tweet-main footer {
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.tweet-main:hover .icons {
+  display: block;
+}
+.tweet-main:hover .username {
+  display: block;
+}
+
+.tweet-content {
+  margin: 0 5%;
+  border-bottom: black solid 2px;
+  text-align: start;
+  font-size: 2rem;
+}
+.tweet-content p {
+  margin-top: 0;
+}
+
+.name-plate {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  display: none;
+  color: #4056a1;
+  opacity: 50%;
+}
+
+.icons {
+  display: none;
+  color: #4056a1;
+  font-size: 1rem;
+}
+.icons i:hover {
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+  }
+
+  main.container {
+    margin: 200px 10% 5% 0;
+  }
+
+  header.page-header {
+    margin: 200px 5% 5% 10%;
+    width: 60%;
+    height: 60;
+  }
+
+  div.animation {
+    margin-top: 0;
+  }
+
+  article.tweet-main {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body nav {
+    background-color: #d89820;
+    background-image: url("../images/light-wool.png");
+    position: relative;
+  }
+  body nav p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  div.new-tweet-btn i {
+    margin-top: 3%;
+    font-size: 25px;
+  }
+
+  header.page-header {
+    margin-top: 0;
+  }
+  header.page-header div.avatar img {
+    margin-top: 0;
+  }
+
+  main.container {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  article.tweet-main {
+    width: 100%;
+  }
+
+  main div.name-plate h2 {
+    font-size: 1em;
+  }
+
+  h3.username {
+    font-size: 0.75em;
+  }
+
+  #back-to-top-id {
+    height: 3em;
+    width: 3em;
+    margin: 0 30px 30px 0;
+  }
+  #back-to-top-id .fa-arrow-alt-circle-up {
+    color: #ffffff;
+    font-size: 3em !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  span.logo {
+    margin-right: 0;
+    margin-top: 2%;
+    text-align: center;
+  }
+
+  div.new-tweet-btn {
+    margin-bottom: 4%;
+  }
+
+  div.name-plate main h2 {
+    font-size: 0.75em;
+  }
+
+  .tweet-main header img {
+    width: 30px;
+  }
+
+  h3.username {
+    display: block;
+  }
+
+  .container footer div.icons {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */
