@@ -8,7 +8,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #ffffff;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
@@ -78,7 +78,7 @@ header h2 {
 
 /* New Tweet form styles */
 form {
-  background-color: #f4f1ec;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -101,10 +101,10 @@ label {
   outline: none;
   resize: none;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #545149;
   height: 80px;
   font-weight: 600;
-  background-color: #f4f1ec;
+  background-color: #ffffff;
 }
 
 .animation {
@@ -122,10 +122,10 @@ label {
 }
 
 .submit-btn {
-  border: thick solid #f4f1ec;
+  border: thick solid #ffffff;
   border-radius: 10px;
   background-color: #4056a1;
-  color: #f4f1ec;
+  color: #ffffff;
   margin: 0;
   padding: 7px 10px;
 }
@@ -188,14 +188,14 @@ footer .footer-container {
 .container {
   width: 90%;
   margin: 3% 5% 0 5%;
-  background-color: #f4f1ec;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .tweet-main {
   width: 90%;
   margin: 20px 5%;
-  border: black solid 2px;
+  border: #545149 solid 2px;
   border-radius: 10px;
   filter: opacity(75%);
   word-wrap: break-word;
@@ -229,7 +229,7 @@ footer .footer-container {
 
 .tweet-content {
   margin: 0 5%;
-  border-bottom: black solid 2px;
+  border-bottom: #545149 solid 2px;
   text-align: start;
   font-size: 2rem;
 }
