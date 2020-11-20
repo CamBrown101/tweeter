@@ -3,7 +3,10 @@ $(document).ready(() => {
   //Jquery cached variables
   const $tweetBtn = $('.new-tweet-btn');
   const $animatedTextarea = $('.animation');
-  const $arrows = $('.arrows')
+  const $arrows = $('.arrows');
+  const $footerContainer = $('.footer-container');
+  const $backToTopBtn = $('.back-to-top-btn');
+  const $tweetText = $('#tweet-text');
 
   //New tweet input button
   $tweetBtn.mouseenter(() => {
@@ -16,17 +19,17 @@ $(document).ready(() => {
 
   $tweetBtn.on('click', () => {
     $animatedTextarea.slideToggle('slow');
-    $('#tweet-text').focus();
-  })
+    $tweetText.focus();
+  });
 
   $(window).scroll(() => {
     if ($(window).scrollTop() > 50) {
-      $('.footer-container').show('slow')
+      $footerContainer.show('slow')
     }
-  })
+  });
 
-  $('.back-to-top-btn').click(() => {
+  $backToTopBtn.click(() => {
     $("body").get(0).scrollIntoView();
-    $('.footer-container').hide('slow');
-  })
+    $footerContainer.hide('slow');
+  });
 });
