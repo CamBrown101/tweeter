@@ -53,11 +53,11 @@ label {
   padding: 7px 10px;
 
   &:hover {
-    border : thick solid $aler-color;
+    border : thick solid $alert-color;
   }
 
   &:focus {
-    border : thick solid $aler-color;
+    border : thick solid $alert-color;
     outline: none;
   }
 }
@@ -77,9 +77,9 @@ label {
   margin: 3% 0 0 2%;
   padding: 10px;
   font-weight: 600;
-  color:$aler-color;
+  color:$alert-color;
 }
 
 .red-text {
-  color:$aler-color;
+  color:$alert-color;
 }
