@@ -56,7 +56,7 @@ $(document).ready(() => {
     });
   };
 
-  const loadTweets = function() {
+  const loadTweets = () => {
     return $.ajax('/tweets', { method: 'GET' })
       .then((tweets) => {
         renderTweets(tweets);

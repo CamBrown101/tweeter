@@ -17,7 +17,7 @@ $(document).ready(() => {
     $arrows.removeClass('animate__bounce animate__animated animate__infinite	infinite');
   });
 
-  $tweetBtn.on('click', () => {
+  $tweetBtn.click(() => {
     $animatedTextarea.slideToggle('slow');
     $tweetText.focus();
   });
