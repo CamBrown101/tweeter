@@ -1,11 +1,13 @@
 $(document).ready(() => {
+  //Initilize WOW adds animation on scroll
+  new WOW().init();
+
   //Cached Jqueries 
   const $errorMessage = $('.error-message');
   const $newTweetForm = $('#new-tweet-form');
   const $text = $('#tweet-text');
   const $charCounter = $('.char-counter');
   const $tweetContainer = $('#tweet-container');
-  const $tweetBtn = $('.new-tweet-btn');
   const $animatedTextarea = $('.animation');
 
   //Prevents js from being injected in tweets from the form 
