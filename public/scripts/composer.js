@@ -24,7 +24,7 @@ $(document).ready(() => {
 
   $(window).scroll(() => {
     if ($(window).scrollTop() > 50) {
-      $footerContainer.show('slow')
+      $footerContainer.show('slow');
     }
   });
 

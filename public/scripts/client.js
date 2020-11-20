@@ -2,7 +2,7 @@ $(document).ready(() => {
   //Initilize WOW adds animation on scroll
   new WOW().init();
 
-  //Cached Jqueries 
+  //Cached Jqueries
   const $errorMessage = $('.error-message');
   const $newTweetForm = $('#new-tweet-form');
   const $text = $('#tweet-text');
@@ -10,14 +10,14 @@ $(document).ready(() => {
   const $tweetContainer = $('#tweet-container');
   const $animatedTextarea = $('.animation');
 
-  //Prevents js from being injected in tweets from the form 
+  //Prevent js from being injected in tweets from the form
   const escape = (str) => {
     let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str))
-    return div.innerHTML
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
-  //Creates the tweet template
+  //Create the tweet template
   const createTweetElement = (tweetObject) => {
     const datePosted = tweetObject.created_at;
     const timeSincePost = moment(datePosted).fromNow();
@@ -43,27 +43,27 @@ $(document).ready(() => {
             <i class="fas fa-heart"></i>
           </div>
         </footer>
-      </article>`
+      </article>`;
 
     return $tweet;
   };
 
-  //Renders the tweet template to the DOM
+  //Render the tweet template to the DOM
   const renderTweets = (tweets) => {
     $tweetContainer.empty();
     tweets.reverse().forEach((element) => {
       $tweetContainer.append(createTweetElement(element));
-    })
+    });
   };
 
   const loadTweets = function() {
     return $.ajax('/tweets', { method: 'GET' })
       .then((tweets) => {
         renderTweets(tweets);
-      })
+      });
   };
 
-  //Creates and shows error message
+  //Create and shows error message
   const errorMessage = (message) => {
     $errorMessage.text(message).slideDown('slow');
   };
@@ -71,6 +71,7 @@ $(document).ready(() => {
   //Initial load of tweets
   loadTweets();
 
+  //Tweet submission
   $newTweetForm.submit((event) => {
     event.preventDefault();
     const $textValue = $text.val();
@@ -81,7 +82,7 @@ $(document).ready(() => {
       return false;
     }
     if ($textValue.length > 140) {
-      errorMessage('Input exceeds 140 characters')
+      errorMessage('Input exceeds 140 characters');
       return false;
     }
 
@@ -100,7 +101,7 @@ $(document).ready(() => {
 
   });
 
-  //Clears error message when the text is changed
+  //Clear error message when the text is changed
   $text.on('input', () => {
     $errorMessage.slideUp('slow', () => {
       $errorMessage.hide();
