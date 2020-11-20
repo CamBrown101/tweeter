@@ -1,0 +1,114 @@
+//Media queries
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+  }
+    main.container{
+      margin: 200px 10% 5% 0;
+    }
+  
+  header.page-header {
+    margin: 200px 5% 5% 10%;
+    width: 60%;
+    height: 60;
+  }
+
+  div.animation {
+    margin-top: 0;
+  }
+
+  article.tweet-main {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    body nav {
+    background-color: #d89820;
+    background-image: url("../images/light-wool.png");
+    position: relative;
+
+    p {
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+
+  div.new-tweet-btn i {
+    margin-top: 3%;
+    font-size: 25px;
+  }
+
+  header.page-header {
+    margin-top: 0;
+
+    div.avatar img {
+     margin-top: 0;
+    }
+  }
+
+  main.container {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  article.tweet-main {
+    width: 100%;
+  }
+
+  main div.name-plate h2 {
+    font-size: 1em;
+  }
+
+  h3.username {
+    font-size: .75em;
+  }
+
+  #back-to-top-id {
+    height: 3em;
+    width: 3em;
+    margin: 0 30px 30px 0;
+
+    .fa-arrow-alt-circle-up {
+      color: #ffffff;
+      font-size: 3em !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  span.logo {
+    margin-right: 0;
+    margin-top: 2%;
+    text-align: center;
+  }
+
+  div.new-tweet-btn {
+    margin-bottom: 4%;
+  }
+
+  div.name-plate main h2 {
+    font-size: .75em;
+  }
+
+  .tweet-main header img {
+    width: 30px
+  }
+
+  h3.username {
+   display: block;
+ }
+
+ .container footer div.icons {
+   display: block;
+ }
+}

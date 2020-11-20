@@ -1,0 +1,38 @@
+// Styles for header
+// @media only screen and (min-width: 1024px) {
+//   .page-header {
+//     margin: 200px 5% 5% 10%;
+//     width: 60%;
+//     height: 60;
+//   }
+// }
+// @media only screen and (max-width: 1024px) and (min-width: 600px)  {
+//   .page-header {
+//   }
+// }
+
+header img {
+  margin-top: 15%;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.page-header {
+  height: 400px;
+  width: 100%;
+  
+  margin-top: 120px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d89820;
+  background-image: url("../images/light-wool.png");
+}
+
+.username-heading {
+  margin: 1% 0 3% 0;
+  font-size: 1.5em;
+}
+
