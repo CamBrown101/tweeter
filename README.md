@@ -2,7 +2,22 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This repository is Cam Brown's project for Lighthouse Labs third project of their bootcamp. The server side code was given to us and I then built upon it to practice HTML, CSS, SASS, JS, jQuery and AJAX skills. I also used moment.js to calculate times to the day and WOW for the fade in effect while you scroll. I also made the app mobile friendly with media queries. HTML was used for the structure, CSS and SASS were used for the styling and some effects. jQuery was used to make the page dynamic and AJAX was used to allow the tweets to refresh without refreshing the page. I also used fontawesome for all of the icons.
+
+## Features
+
+- Character counter.
+- Return to top button that appears when scrolling.
+- Button to toggle the input box for a new tweet.
+- Accurate time stamps on tweets.
+- Scrolling animation.
+- Form validation for tweets over 140 character and empty tweets, including tweets that are just white space.
+
+## Screenshots
+
+!["Screenshot of the app on a computer screen]{https://github.com/CamBrown101/tweeter/blob/master/docs/fullscreen.png}
+!["Screenshot of the app on a smaller screen]{https://github.com/CamBrown101/tweeter/blob/master/docs/Tablet.png}
+!["Screenshot of the app on a mobile screen]{https://github.com/CamBrown101/tweeter/blob/master/docs/mobile.png}
 
 ## Getting Started
 
