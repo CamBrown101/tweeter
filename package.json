@@ -1,15 +1,20 @@
 {
   "name": "tweeter",
   "version": "1.0.0",
+  "author": "Cameron Brown, cameron-brown@live.com Github: CamBrown101 ",
   "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
+  "license": "ISC",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
-  "author": "Lighthouse Labs",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamBrown101/tweeter.git"
+  },
+  "homepage": "https://github.com/CamBrown101/tweeter#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
