@@ -15,9 +15,9 @@ This repository is Cam Brown's project for Lighthouse Labs third project of thei
 
 ## Screenshots
 
-!["Screenshot of the app on a computer screen"]{https://github.com/CamBrown101/tweeter/blob/master/docs/fullscreen.png}
-!["Screenshot of the app on a smaller screen"]{https://github.com/CamBrown101/tweeter/blob/master/docs/Tablet.png}
-!["Screenshot of the app on a mobile screen"]{https://github.com/CamBrown101/tweeter/blob/master/docs/mobile.png}
+!["Screenshot of the app on a computer screen"](https://github.com/CamBrown101/tweeter/blob/master/docs/fullscreen.png)
+!["Screenshot of the app on a smaller screen"](https://github.com/CamBrown101/tweeter/blob/master/docs/Tablet.png)
+!["Screenshot of the app on a mobile screen"](https://github.com/CamBrown101/tweeter/blob/master/docs/mobile.png)
 
 ## Getting Started
 
