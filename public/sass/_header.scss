@@ -1,15 +1,4 @@
 // Styles for header
-// @media only screen and (min-width: 1024px) {
-//   .page-header {
-//     margin: 200px 5% 5% 10%;
-//     width: 60%;
-//     height: 60;
-//   }
-// }
-// @media only screen and (max-width: 1024px) and (min-width: 600px)  {
-//   .page-header {
-//   }
-// }
 
 header img {
   margin-top: 15%;
@@ -27,7 +16,7 @@ header h2 {
   display:flex;
   align-items: center;
   flex-direction: column;
-  background-color: #d89820;
+  background-color: $header-background;
   background-image: url("../images/light-wool.png");
 }
 

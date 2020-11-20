@@ -1,7 +1,7 @@
 /* New Tweet form styles */
 
 form {
-  background-color: #f4f1ec;
+  background-color: $project-white;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -25,10 +25,10 @@ label {
   outline: none;
   resize: none;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $font-color;
   height: 80px;
   font-weight: 600;
-  background-color: #f4f1ec;
+  background-color: $project-white;
 }
 
 .animation {
@@ -46,19 +46,19 @@ label {
 }
 
 .submit-btn {
-  border: thick solid #f4f1ec;
+  border: thick solid $project-white;
   border-radius: 10px;
-  background-color: #4056a1;
-  color: #f4f1ec;
+  background-color: $accent-color;
+  color: $project-white;
   margin: 0;
   padding: 7px 10px;
 
   &:hover {
-    border : thick solid #cf3b3b;
+    border : thick solid $aler-color;
   }
 
   &:focus {
-    border : thick solid #cf3b3b;
+    border : thick solid $aler-color;
     outline: none;
   }
 }
@@ -78,9 +78,9 @@ label {
   margin: 3% 0 0 2%;
   padding: 10px;
   font-weight: 600;
-  color:#cf3b3b;
+  color:$aler-color;
 }
 
 .red-text {
-  color:#cf3b3b;
+  color:$aler-color;
 }

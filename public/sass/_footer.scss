@@ -12,7 +12,7 @@ footer {
     position: fixed;
     bottom:0;
     right: 0;
-    background-color: #4056a1;
+    background-color: $accent-color;
   }
   .footer-container {
     display: none;
@@ -20,7 +20,7 @@ footer {
 }
 
 .back-to-top-btn i {
-  color: #ffffff;
+  color: $project-white;
   font-size: 4.6em;
 }
 

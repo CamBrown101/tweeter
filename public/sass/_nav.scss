@@ -10,8 +10,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  background-color: #4056a1;
-  color: #ffffff;
+  background-color: $accent-color;
+  color: $project-white;
 
   p {
     margin: 0;
@@ -29,7 +29,7 @@ nav {
   i {
     margin-top: 6%;
     font-size: 50px;
-    color: #cf3b3b;
+    color: $aler-color;
   }
 }
 

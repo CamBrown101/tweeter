@@ -3,13 +3,13 @@
 .tweet-main {
   width: 90%;
   margin: 20px 5%;
-  border: black solid 2px;
+  border: $font-color solid 2px;
   border-radius: 10px;
   filter: opacity(75%);
   word-wrap: break-word;
 
   &:hover {
-    box-shadow: 10px 10px 10px #4056a1;
+    box-shadow: 10px 10px 10px $accent-color;
     filter: none;
   }
   
@@ -43,7 +43,7 @@
 
 .tweet-content {
   margin: 0 5%;
-  border-bottom: black solid 2px;
+  border-bottom: $font-color solid 2px;
   text-align: start;
   font-size: 2rem;
   p {
@@ -58,13 +58,13 @@
 
 .username {
   display: none;
-  color:#4056a1;
+  color:$accent-color;
   opacity: 50%;
 }
 
 .icons {
   display: none;
-  color: #4056a1;
+  color: $accent-color;
   font-size: 1rem;
 
   i:hover {
